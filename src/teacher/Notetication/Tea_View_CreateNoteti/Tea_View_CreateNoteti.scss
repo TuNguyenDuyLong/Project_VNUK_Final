@@ -1,0 +1,154 @@
+.Notetication  {
+    display: flex;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  .Noteti_Content {
+    flex: 2;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.4rem;
+  }
+  .Menu_Notetication {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Phần View thông báo */
+  .View_Notetication {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+  }
+  
+  /* Tiêu đề cho phần thông báo */
+  h1, h2, h3, .Notetie_title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;  /* Căn trái tiêu đề */
+  }
+  
+  /* Bảng menu cho thông báo */
+  .menu_table {
+    margin-top: 15px;
+  }
+  
+  .menu_table a {
+    color: #0b0c0e;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #007bff;
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  
+  .menu_table a:hover {
+    color: #0056b3;
+    border-bottom: 1px solid #0056b3;
+  }
+  
+  /* Quản lý thông báo giảng viên */
+  .Menu_Manage_Notetication {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .Notetie_title_menu {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* Danh sách thông báo */
+  .notification-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Mỗi phần tử thông báo */
+  .notification-item {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hiệu ứng hover cho các thông báo */
+  .notification-item:hover {
+    background-color: #d3d3d3;
+  }
+  
+  /* Tiêu đề thông báo */
+  .notification-item h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;  /* Làm cho tiêu đề đậm */
+  }
+  
+  /* Mô tả thông báo */
+  .notification-item p {
+    font-size: 1.4rem;
+    color: #555;
+  }
+  
+  /* Chi tiết thông báo */
+  /* Phần chi tiết thông báo */
+  .NotificationDetail-block {
+      background-color: #ffffff;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Phần thông báo bên phải menu */
+  .Menu_Notetication, .Menu_Manage_Notetication {
+    margin-bottom: 20px;
+  }
+  .delete-button {
+    min-width: 120px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: #fd1b1b;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .delete-button:hover{
+    background-color: #af0000;
+  }
+  .export-button {
+    margin-left: 10px;
+    min-width: 120px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .export-button:hover{
+    background-color: #004792;
+  }

@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: left;
+    background: linear-gradient(to right, #27458a, #00b7cf);
+    border-radius: 5px; 
+    margin: 10px 5px; 
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    border-bottom: 3px solid #fcd600;
+  }
+  
+  .nav-link.active {
+    border-bottom: 3px solid #fcd600;
+    color: #fcd600;
+   
+  }
+  
+  

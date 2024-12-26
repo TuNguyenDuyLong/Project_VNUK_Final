@@ -1,0 +1,96 @@
+.introduce-container {
+  padding: 50px 20px;
+  background-color: #f4f6f9;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.intro-header {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.intro-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.intro-header p {
+  font-size: 1.6rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.intro-history, .intro-mission, .intro-achievements {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.intro-history:hover, .intro-mission:hover, .intro-achievements:hover {
+  transform: translateY(-10px);
+}
+
+.intro-history p, .intro-mission p, .intro-achievements ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.intro-achievements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.intro-achievements li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.intro-footer {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .intro-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-header p {
+    font-size: 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .intro-history p, .intro-mission p {
+    font-size: 1rem;
+  }
+
+  .intro-achievements li {
+    font-size: 1rem;
+  }
+}

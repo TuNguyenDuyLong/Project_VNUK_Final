@@ -1,0 +1,44 @@
+.room-manager {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1600px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .dropdown_room {
+      padding: 8px;
+      font-size: 1.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+      outline: none;
+      transition: border-color 0.2s;
+      cursor: pointer;
+      height:36px;
+    }
+    .room_title_select {
+      font-size: 1.6rem;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+    
+      td {
+        vertical-align: top;
+      }
+    }
+    

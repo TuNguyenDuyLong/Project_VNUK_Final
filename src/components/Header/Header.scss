@@ -1,0 +1,114 @@
+.header {
+    position: fixed; 
+    top: -10px;
+    left: 0;
+    width: 100%; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
+    margin-bottom: 20px;
+  }
+  
+  .header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7px;
+    color: #fff;
+  }
+  
+  .header_logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_logo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .header_name h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2b2355;
+  }
+  .header_user {
+    display: flex;
+    align-items: center;
+    background-color: #00569C;
+    width: 350px;
+    border-radius: 5px;
+    justify-content: space-between;
+    
+  }
+  
+  .header_user-avatar {
+    margin-right: 5px;
+    filter: brightness(100%); 
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    margin: 10px 10px;
+     
+    
+  }
+  .display_username {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .header_login {
+    background-color: #fc9700;
+    margin: 10px 10px;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1,4rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .header_login:hover {
+    background-color: #FFAC33;
+    color: #fff;
+  }
+  .header_bottom {
+    background: linear-gradient(to left, #4b6cb7, #182848);
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+  .header_menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+  }
+  
+  .header-link {
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  
+    &:hover {
+        border-bottom: 2px solid #f1c232;
+        color: #f1c232;
+    }
+  }
+  .header-link:active {
+    transform: scale(0.98);
+  
+  }
+  

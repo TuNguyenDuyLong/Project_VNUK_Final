@@ -1,0 +1,43 @@
+.course-management {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+
+    input {
+        padding: 10px;
+        width: 300px;
+        font-size: 16px;
+    }
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

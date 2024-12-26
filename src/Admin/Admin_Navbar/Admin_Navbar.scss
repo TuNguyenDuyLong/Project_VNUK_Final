@@ -1,0 +1,35 @@
+.navbar {
+    position: relative;
+
+    .nav-link {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        cursor: pointer;
+    }
+    .submenu {
+        position: absolute;
+        top: 45px;
+        left: 400px;
+        background: linear-gradient(to right, #27458a, #00b7cf);
+        border: 1px solid #ccc;
+        width: 15%;
+        z-index: 10;
+        display: none;
+        border-radius: 5px;
+    }
+    .nav-link-container:hover .submenu {
+        display: block;
+    }
+
+    .submenu .nav-link {
+        padding: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.3rem;
+        text-align: left;
+    }
+}

@@ -1,0 +1,113 @@
+.View_Note {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+.Noteti_title {
+    text-align: left;
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Danh sách thông báo */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification_item {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #eaeaea;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.date_time {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.date_now, .time_now {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.note_title {
+    color: #007bff;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.note_content {
+    color: #333;
+    line-height: 1.4;
+    font-size: 1.4rem;
+    text-align: left;
+
+
+
+}
+
+.Menu_Notetication, .Menu_Manage_Notetication {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.Notetie_title_menu {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.menu_table a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+
+    &:hover {
+        color: #007bff;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    background-color: #57a3f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.3rem;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+
+    &.active {
+        background-color: #0056b3;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}

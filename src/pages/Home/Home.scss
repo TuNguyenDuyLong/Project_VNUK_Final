@@ -1,0 +1,131 @@
+.home {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.hero-section {
+  background: url('https://www.udn.vn/app/webroot/upload/images/H6%20vnuk.jpg') no-repeat center center/cover;
+  color: white; 
+  padding: 150px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.programs-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.program {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.program h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.program p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.program:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+ul li a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
