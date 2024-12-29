@@ -274,18 +274,6 @@ const Tea_View_CreateNoteti = () => {
             </div>
 
             <div className="grid__column-1-3">
-                <div className="Menu_Notetication">
-                    <h1 className="Notetie_title_menu">THÔNG BÁO DÀNH CHO GIẢNG VIÊN</h1>
-                    <div className="menu_table">
-                        <a href="#">Hội thảo, tập huấn và buổi họp</a>
-                        <a href="#">Nghiên cứu và học bổng</a>
-                        <a href="#">Thủ tục hành chính</a>
-                        <a href="#">Chính sách và quy định mới</a>
-                        <a href="#">Biểu mẫu</a>
-                        <a href="#">Lịch giảng dạy</a>
-                        <a href="#">Lịch coi thi và chấm thi</a>
-                    </div>
-                </div>
                 <div className="Menu_Manage_Notetication">
                     <h1 className="Notetie_title_menu">QUẢN LÝ THÔNG BÁO GIẢNG VIÊN</h1>
                     <div className="menu_table">
@@ -293,7 +281,7 @@ const Tea_View_CreateNoteti = () => {
                         <Link to="/tea_on_createnoteti">Đăng ký báo bù</Link>
                         <Link to="/tea_createnoteti_session">Tạo thông báo môn học</Link>
                         <Link to="/tea_view_createnoteti">Xem thông tin đăng kí</Link>
-                        <Link to="/tea_view_createnoteti_session">Xem thông báo đã tạo</Link>
+                        <Link to="/tea_view_createnoteti_session">Xem thông báo môn học đã tạo</Link>
                     </div>
                 </div>
             </div>

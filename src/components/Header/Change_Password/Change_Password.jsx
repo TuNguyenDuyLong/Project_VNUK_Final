@@ -48,7 +48,6 @@ const Change_Password = () => {
             });
 
             if (response.ok) {
-                alert('Mật khẩu đã được thay đổi thành công!');
                 setIsChanged(true);
             } else {
                 const data = await response.json();
@@ -61,9 +60,9 @@ const Change_Password = () => {
         }
     };
 
-    // Đổi hàm handleClose để quay về trang trước đó
+
     const handleClose = () => {
-        navigate(-1);  // Quay lại trang trước đó
+        navigate(-1);
     };
 
     return (
@@ -71,7 +70,7 @@ const Change_Password = () => {
             <div className="change-password-form">
                 {isChanged ? (
                     <div className="success-message">
-                        <h2>Mật khẩu đã được thay đổi thành công!</h2>
+                        <h2>Mật khẩu đã được thay đổi thành công!!!</h2>
                         <button onClick={handleClose}>Đóng</button>
                     </div>
                 ) : (
@@ -84,10 +83,12 @@ const Change_Password = () => {
                             <input
                                 type="password"
                                 id="oldPassword"
+                                name="password"
                                 value={oldPassword}
                                 onChange={(e) => setOldPassword(e.target.value)}
                                 placeholder="Mật khẩu cũ"
                                 required
+                                autoComplete="off"
                             />
                         </div>
                         <div className="form-group">
@@ -95,10 +96,12 @@ const Change_Password = () => {
                             <input
                                 type="password"
                                 id="newPassword"
+                                name="password"
                                 value={newPassword}
                                 onChange={(e) => setNewPassword(e.target.value)}
                                 placeholder="Mật khẩu mới"
                                 required
+                                autoComplete="off"
                             />
                         </div>
                         <div className="form-group">

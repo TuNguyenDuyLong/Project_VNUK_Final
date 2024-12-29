@@ -139,14 +139,15 @@ const Register_Room = () => {
             return;
         }
 
-        // Tạo thông báo với trường Purpose và SemesterID
         const noticeOffsetInputDto = {
             semesterID: selectedSemester,
             roomID: classRoom,
             classPeriodIDs: classPeriods,
             purpose: purpose,
+            weekBooking: week,
         };
         console.log("selectedSemester:", selectedSemester);
+        console.log("week:", week);
         console.log("RoomID:", classRoom);
         console.log("classPeriods:", classPeriods);
         console.log("purpose:", purpose);
@@ -353,6 +354,16 @@ const Register_Room = () => {
 
                         {error && <div className="error">{error}</div>}
                     </form>
+                </div>
+            </div>
+            <div className="grid__column-1-3">
+                <div className="Menu_Manage_Notetication">
+                    <h1 className="Notetie_title_menu">QUẢN LÝ ĐĂNG KÝ PHÒNG</h1>
+                    <div className="menu_table">
+                        <Link to="/registration_room">Đăng ký phòng</Link>
+                        <Link to="/history_register_room">Lịch sử đăng ký phòng</Link>
+
+                    </div>
                 </div>
             </div>
         </div>

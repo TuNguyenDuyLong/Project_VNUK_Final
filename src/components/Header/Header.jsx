@@ -15,8 +15,16 @@ const Header = () => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
         if (storedUser) {
             setUser(storedUser); // Nếu có thông tin người dùng trong localStorage, đặt vào state
+            // Set thời gian hết hạn phiên đăng nhập
+            const timeout = setTimeout(() => {
+                alert('Phiên đăng nhập của bạn đã hết hạn.');
+                handleLogout(); // Đăng xuất người dùng khi hết hạn phiên
+            }, 30 * 60 * 1000); // 30 phút (30 * 60 * 1000 milliseconds)
+
+            // Dọn dẹp setTimeout khi component unmount hoặc người dùng đăng xuất
+            return () => clearTimeout(timeout);
         }
-    }, []);
+    }, []); // useEffect chạy một lần khi component mount
 
     const handleLogin = () => {
         setShowLogin(prevState => !prevState);

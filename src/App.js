@@ -16,6 +16,7 @@ import TimeTable from './pages/TimeTable/TimeTable';
 import ExamSchedule from './pages/ExamSchedule/ExamSchedule';
 import ViewNoteti from './pages/ViewNoteti/ViewNoteti';
 import ViewNoteti_Course from './pages/ViewNoteti_Course/ViewNoteti_Course';
+
 // Các trang dành cho giảng viên
 import Tea_TimeTable from './teacher/Tea_TimeTable/Tea_TimeTable';
 import Tea_ExamSchedule from './teacher/Tea_ExamSchedule/Tea_ExamSchedule';
@@ -25,9 +26,11 @@ import Tea_View_CreateNoteti from './teacher/Notetication/Tea_View_CreateNoteti/
 import Tea_CreateNoteti_com from './teacher/Notetication/Tea_CreateNoteti_com/Tea_CreateNoteti_com';
 import Tea_CreateNoteti_session from './teacher/Notetication/Tea_CreateNoteti_session/Tea_CreateNoteti_session';
 import Tea_View_CreateNoteti_session from './teacher/Notetication/Tea_View_CreateNoteti_session/Tea_View_CreateNoteti_session';
+
 // Các trang dành cho đào tạo
 import Search_Teaching_time from './Admin/Search_Teaching_time/Search_Teaching_time';
-import Register_Room from './Admin/Register_Room/Register_Room'
+import Register_Room from './Admin/Register_Room/Register_Room';
+import History_register_room from './Admin/History_register_room/History_register_room'
 
 import Login from './components/Header/Login/Login';
 import Change_Password from './components/Header/Change_Password/Change_Password';
@@ -45,24 +48,26 @@ const App = () => {
         setUser(parsedUser); // Lưu thông tin người dùng vào state
       } catch (error) {
         console.error('Lỗi khi phân tích JSON:', error);
+        setUser(null); // Đặt về null nếu có lỗi
       }
     } else {
-      setUser(null);
+      setUser(null); // Đặt về null nếu không có thông tin người dùng
     }
-  }, []);
+  }, []); // Chạy 1 lần khi app khởi động
 
+  // Hàm đăng xuất
   const handleLogout = () => {
-    localStorage.removeItem('user');
-    setUser(null);
-    navigate('/');
-  };
-  useEffect(() => {
-    const publicPaths = ['/', '/news', '/introduce', '/admissions'];
-    if (!user && !publicPaths.includes(window.location.pathname)) {
-      navigate('/');
-    }
-  }, [user, navigate]);
+    const confirmLogout = window.confirm('Bạn có chắc muốn đăng xuất?');
+    if (confirmLogout) {
+      // Xóa dữ liệu lưu trữ
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
 
+      // Đặt lại state user về null
+      setUser(null); // Cập nhật lại state user về null để cập nhật giao diện
+      navigate('/'); // Chuyển hướng về trang đăng nhập
+    }
+  };
 
   return (
     <div className="app">
@@ -71,28 +76,33 @@ const App = () => {
       {/* Header */}
       <Header handleLogout={handleLogout} />
 
-      {user?.role === 'Teacher' ? (<Tea_Navbar />) : user?.role === 'Student' ? (<Navbar />) : user?.role === 'Training' ? (<Admin_Navbar />) : null}
+      {/* Navbar tùy theo role của người dùng */}
+      {user?.role === 'Teacher' ? (
+        <Tea_Navbar />
+      ) : user?.role === 'Student' ? (
+        <Navbar />
+      ) : user?.role === 'Training' ? (
+        <Admin_Navbar />
+      ) : null}
 
       {/* Route chính */}
       <Routes>
-        {/* Route công khai */}
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/introduce" element={<Introduce />} />
         <Route path="/admissions" element={<Admissions />} />
 
-        {/* Route dành cho sinh viên */}
+        {/* Routes cho sinh viên */}
         {user?.role === 'Student' && (
           <>
             <Route path="/timetable" element={<TimeTable />} />
             <Route path="/examschedule" element={<ExamSchedule />} />
             <Route path="/viewnoteti" element={<ViewNoteti />} />
             <Route path="/viewNoteti_course" element={<ViewNoteti_Course />} />
-
           </>
         )}
 
-        {/* Route dành cho giảng viên */}
+        {/* Routes cho giảng viên */}
         {user?.role === 'Teacher' && (
           <>
             <Route path="/tea_timetable" element={<Tea_TimeTable />} />
@@ -103,18 +113,19 @@ const App = () => {
             <Route path="/tea_view_createnoteti" element={<Tea_View_CreateNoteti />} />
             <Route path="/tea_examschedule" element={<Tea_ExamSchedule />} />
             <Route path="/tea_view_createnoteti_session" element={<Tea_View_CreateNoteti_session />} />
-
           </>
         )}
-        {/* Route dành cho đào tạo */}
+
+        {/* Routes cho đào tạo */}
         {user?.role === 'Training' && (
           <>
-            <Route path="/search_teaching_time" element={< Search_Teaching_time />} />
-            <Route path="/registration_room" element={< Register_Room />} />
+            <Route path="/search_teaching_time" element={<Search_Teaching_time />} />
+            <Route path="/registration_room" element={<Register_Room />} />
+            <Route path="/history_register_room" element={<History_register_room />} />
           </>
         )}
 
-        {/* Route đăng nhập */}
+        {/* Routes cho đăng nhập */}
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/change_password" element={<Change_Password />} />
       </Routes>

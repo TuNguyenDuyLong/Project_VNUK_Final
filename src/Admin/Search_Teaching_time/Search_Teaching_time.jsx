@@ -226,66 +226,23 @@ const Search_Teaching_time = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Tiết 1</td>
-                            <td>7:00 AM - 7:45 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 2</td>
-                            <td>7:45 AM - 8:30 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 3</td>
-                            <td>8:30 AM - 9:15 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 4</td>
-                            <td>9:15 AM - 10:00 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 5</td>
-                            <td>10:00 AM - 10:45 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 6</td>
-                            <td>10:45 AM - 11:30 AM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 7</td>
-                            <td>11:30 AM - 12:15 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 8</td>
-                            <td>12:15 PM - 1:00 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 9</td>
-                            <td>1:00 PM - 1:45 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 10</td>
-                            <td>1:45 PM - 2:30 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 11</td>
-                            <td>2:30 PM - 3:15 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 12</td>
-                            <td>3:15 PM - 4:00 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 13</td>
-                            <td>4:00 PM - 4:45 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 14</td>
-                            <td>4:45 PM - 5:30 PM</td>
-                        </tr>
-                        <tr>
-                            <td>Tiết 15</td>
-                            <td>5:30 PM - 6:15 PM</td>
-                        </tr>
+                        {[
+                            '7:00 AM - 7:50 AM',   // Tiết 1
+                            '8:00 AM - 8:50 AM',   // Tiết 2
+                            '9:00 AM - 9:50 AM',   // Tiết 3
+                            '10:00 AM - 10:50 AM', // Tiết 4
+                            '11:00 AM - 11:50 AM', // Tiết 5
+                            '12:00 PM - 12:50 PM', // Tiết 6
+                            '1:00 PM - 1:50 PM',   // Tiết 7
+                            '2:00 PM - 2:50 PM',   // Tiết 8
+                            '3:00 PM - 3:50 PM',   // Tiết 9
+                            '4:00 PM - 4:50 PM',   // Tiết 10
+                        ].map((time, index) => (
+                            <tr key={index}>
+                                <td>Tiết {index + 1}</td>
+                                <td>{time}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>

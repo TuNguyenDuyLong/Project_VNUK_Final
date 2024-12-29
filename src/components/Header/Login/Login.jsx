@@ -40,15 +40,8 @@ const Login = ({ setUser }) => {
                 localStorage.setItem('user', JSON.stringify(user));
                 setUser(user);
 
-                if (user.role === 'Teacher') {
-                    navigate('/tea_viewnoteti');
-                } else if (user.role === 'Student') {
-                    navigate('/viewnoteti');
-                } else if (user.role === 'Training') {
-                    navigate('/admin_viewnoteti');
-                } else {
-                    alert('Vai trò không hợp lệ!');
-                }
+                navigate('/');
+
 
                 setUsername('');
                 setPassword('');
@@ -60,6 +53,8 @@ const Login = ({ setUser }) => {
             alert('Đã xảy ra lỗi. Vui lòng thử lại sau!');
         }
     };
+
+
 
     return (
         <div className="login-form-overlay">

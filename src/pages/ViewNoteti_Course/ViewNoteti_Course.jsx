@@ -115,7 +115,7 @@ const ViewNoteti_Course = () => {
                                 ))}
                             </div>
                         ) : (
-                            <p>Chưa có thông báo nào được tạo !!!</p>
+                            <p>Chưa có thông báo nào !!!</p>
                         )}
                     </div>
                 </div>
